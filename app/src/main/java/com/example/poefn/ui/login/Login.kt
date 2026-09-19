@@ -74,6 +74,8 @@ class LoginActivity : AppCompatActivity() {
                     response.body()?.success == true
                 ) {
 
+                    response.body()?.token?.let { SessionManager.saveToken(it) }
+
                     Toast.makeText(
                         this@LoginActivity,
                         "Login successful",

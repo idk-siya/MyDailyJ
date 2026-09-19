@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.poefn.ui.login.LoginActivity
+import com.example.poefn.ui.login.SessionManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        SessionManager.init(this)
 
         // Show the MyDailyJ splash screen
         setContentView(R.layout.activity_main)
